@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin An | Global Market Manager - ICreate Robot</title>
+    <!-- 使用 Tailwind CSS 构建快速响应式布局 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Font Awesome 字体图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-glow {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+        }
+
+        .action-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .action-button:active {
+            transform: scale(0.97);
+        }
+
+        .action-button:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* 呼吸灯效果的头像边框 */
+        .avatar-border {
+            position: relative;
+            padding: 4px;
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #3b82f6);
+            background-size: 200% 200%;
+            animation: gradient-move 4s linear infinite;
+        }
+
+        @keyframes gradient-move {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .toast {
+            animation: slideUp 0.3s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="text-slate-200 min-h-screen flex items-center justify-center p-4 sm:p-8">
+
+    <div class="max-w-md w-full glass-panel rounded-[2.5rem] p-8 card-glow">
+        
+        <!-- Header Section -->
+        <div class="text-center mb-8">
+            <div class="avatar-border w-28 h-28 rounded-full mx-auto mb-6 shadow-2xl shadow-blue-500/20">
+                <!-- 头像部分：已指向您的照片文件 -->
+                <div class="w-full h-full rounded-full overflow-hidden bg-slate-800">
+                    <img src="IMG-20251126-WA0006~2.jpg" 
+                         onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Austin'"
+                         alt="Austin An" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+            <h1 class="text-3xl font-bold tracking-tight text-white mb-1">Austin An</h1>
+            <p class="text-blue-400 font-medium mb-2">Global Market Manager</p>
+            <p class="text-slate-400 text-sm">Shandong ICreate Education Technology Co., Ltd.</p>
+        </div>
+
+        <!-- Tag Section: 强调核心优势 -->
+        <div class="flex flex-wrap justify-center gap-2 mb-10">
+            <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-300 text-[10px] uppercase tracking-wider rounded-full font-semibold">AI Education</span>
+            <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 text-purple-300 text-[10px] uppercase tracking-wider rounded-full font-semibold">K12 Robotics</span>
+            <span class="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-[10px] uppercase tracking-wider rounded-full font-semibold">Ages 3-18</span>
+        </div>
+
+        <!-- Action Links -->
+        <div class="grid gap-4">
+            
+            <!-- LinkedIn -->
+            <a href="YOUR_LINKEDIN_URL" target="_blank" class="action-button flex items-center p-4 rounded-2xl group">
+                <div class="w-12 h-12 flex items-center justify-center bg-blue-600/20 rounded-xl group-hover:bg-blue-600/30 transition-colors">
+                    <i class="fab fa-linkedin-in text-blue-500 text-2xl"></i>
+                </div>
+                <div class="ml-4 text-left">
+                    <p class="text-sm font-bold text-white">LinkedIn</p>
+                    <p class="text-xs text-slate-400">Professional Networking</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-slate-600"></i>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/8613589036483" target="_blank" class="action-button flex items-center p-4 rounded-2xl group">
+                <div class="w-12 h-12 flex items-center justify-center bg-green-500/20 rounded-xl group-hover:bg-green-500/30 transition-colors">
+                    <i class="fab fa-whatsapp text-green-500 text-2xl"></i>
+                </div>
+                <div class="ml-4 text-left">
+                    <p class="text-sm font-bold text-white">WhatsApp</p>
+                    <p class="text-xs text-slate-400">+86 135 8903 6483</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-slate-600"></i>
+            </a>
+
+            <!-- WeChat -->
+            <button onclick="copyToClipboard('weak2snow', 'WeChat ID')" class="action-button flex items-center p-4 rounded-2xl group w-full">
+                <div class="w-12 h-12 flex items-center justify-center bg-emerald-500/20 rounded-xl group-hover:bg-emerald-500/30 transition-colors">
+                    <i class="fab fa-weixin text-emerald-400 text-2xl"></i>
+                </div>
+                <div class="ml-4 text-left">
+                    <p class="text-sm font-bold text-white">WeChat</p>
+                    <p class="text-xs text-slate-400">ID: weak2snow (Click to Copy)</p>
+                </div>
+                <i class="far fa-copy ml-auto text-slate-600"></i>
+            </button>
+
+            <!-- Instagram -->
+            <a href="YOUR_INSTAGRAM_URL" target="_blank" class="action-button flex items-center p-4 rounded-2xl group">
+                <div class="w-12 h-12 flex items-center justify-center bg-pink-600/20 rounded-xl group-hover:bg-pink-600/30 transition-colors">
+                    <i class="fab fa-instagram text-pink-500 text-2xl"></i>
+                </div>
+                <div class="ml-4 text-left">
+                    <p class="text-sm font-bold text-white">Instagram</p>
+                    <p class="text-xs text-slate-400">See Classroom Demos</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-slate-600"></i>
+            </a>
+
+            <!-- Official Website -->
+            <a href="http://www.icreaterobot.com" target="_blank" class="mt-4 flex items-center justify-center py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl font-bold text-white hover:opacity-90 transition-opacity shadow-lg shadow-blue-900/20">
+                <i class="fas fa-globe mr-2"></i> Visit Official Website
+            </a>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-10 text-center">
+            <p class="text-slate-500 text-[10px] uppercase tracking-widest">&copy; 2026 ICreate Education Technology</p>
+        </div>
+
+    </div>
+
+    <!-- 复制成功的提示框 -->
+    <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-3 rounded-full shadow-2xl hidden z-50 toast">
+        <span id="toast-msg">Copied!</span>
+    </div>
+
+    <script>
+        function copyToClipboard(text, label) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast(`${label} copied!`);
+            } catch (err) {
+                console.error('Copy failed', err);
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const msg = document.getElementById('toast-msg');
+            msg.innerText = message;
+            toast.classList.remove('hidden');
+            
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
