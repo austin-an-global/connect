@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin An | Global Partnerships Manager</title>
+
+    <!-- 领英预览核心配置：不改变现有设定，仅增加抓取标签 -->
+    <meta property="og:title" content="Austin An | Global Partnerships Manager">
+    <meta property="og:description" content="K-12 AI & Coding Education Solutions | Global Partnerships">
+    <!-- 注意：图片必须使用带域名的绝对路径，领英才能抓取到 -->
+    <meta property="og:image" content="https://austin-an-global.github.io/connect/Portrait.jpg">
+    <meta property="og:url" content="https://austin-an-global.github.io/connect/">
+    <meta property="og:type" content="website">
+
+    <!-- 以下为你原有的所有设定，保持不变 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .card-glow { box-shadow: 0 0 40px rgba(59, 130, 246, 0.1); }
+        .btn-action {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .btn-action:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        .avatar-container {
+            position: relative;
+            padding: 3px;
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #3b82f6);
+            background-size: 200% 200%;
+            animation: border-rotate 4s linear infinite;
+        }
+        @keyframes border-rotate {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .toast { animation: fadeInUp 0.3s ease-out forwards; }
+        @keyframes fadeInUp {
+            from { transform: translate(-50%, 20px); opacity: 0; }
+            to { transform: translate(-50%, 0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="text-slate-200 min-h-screen flex items-center justify-center p-4 py-6">
+
+    <div class="max-w-md w-full glass-panel rounded-[2.5rem] p-6 sm:p-8 card-glow">
+        
+        <!-- Header Section -->
+        <div class="text-center mb-5">
+            <div class="avatar-container w-20 h-20 rounded-full mx-auto mb-3 shadow-xl">
+                <div class="w-full h-full rounded-full overflow-hidden bg-slate-800 border-2 border-slate-900">
+                    <img src="Portrait.jpg" onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Austin'" alt="Austin An" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <h1 class="text-2xl font-bold tracking-tight text-white mb-0.5">Austin An</h1>
+            <p class="text-blue-400 font-semibold text-xs mb-1">Global Partnerships Manager</p>
+            <p class="text-slate-500 text-[10px] tracking-wide mb-3">Shandong ICreate Education Technology Co., Ltd.</p>
+            
+            <div class="flex items-center justify-center space-x-2 text-[9px] font-bold uppercase tracking-widest text-slate-400 bg-white/5 py-1.5 px-4 rounded-full inline-flex">
+                <span>AI Education</span>
+                <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+                <span>K-12 Robotics</span>
+                <span class="w-1 h-1 bg-slate-600 rounded-full"></span>
+                <span class="text-blue-400">Partnerships</span>
+            </div>
+        </div>
+
+        <div class="space-y-5">
+            <!-- 核心功能：手册与领英并排 -->
+            <div class="grid grid-cols-2 gap-3">
+                <button onclick="openModal()" class="btn-action flex flex-col items-center justify-center p-4 rounded-2xl border-l-4 border-l-emerald-500 text-center group">
+                    <i class="fas fa-file-pdf text-xl text-emerald-400 mb-2"></i>
+                    <p class="text-[11px] font-bold text-white">Brochure</p>
+                </button>
+
+                <a href="https://www.linkedin.com/in/austin-an-bb3aa7351" target="_blank" class="btn-action flex flex-col items-center justify-center p-4 rounded-2xl text-center group">
+                    <i class="fab fa-linkedin-in text-xl text-blue-500 mb-2"></i>
+                    <p class="text-[11px] font-bold text-white">LinkedIn</p>
+                </a>
+            </div>
+
+            <!-- 联系方式 -->
+            <div>
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="https://wa.me/8613589036483" target="_blank" class="btn-action flex items-center p-3.5 rounded-2xl group">
+                        <i class="fab fa-whatsapp text-lg text-green-500 mr-3"></i>
+                        <span class="text-xs font-bold text-white">WhatsApp</span>
+                    </a>
+                    <button onclick="copyToClipboard('weak2snow', 'WeChat')" class="btn-action flex items-center p-3.5 rounded-2xl group">
+                        <i class="fab fa-weixin text-lg text-emerald-400 mr-3"></i>
+                        <span class="text-xs font-bold text-white">WeChat</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 社交媒体 -->
+            <div class="grid grid-cols-2 gap-3">
+                <a href="https://www.instagram.com/austin831018?igsh=MXRjc2l2dWl2Mno2Zg==" target="_blank" class="btn-action flex items-center p-3.5 rounded-2xl group">
+                    <i class="fab fa-instagram text-lg text-pink-500 mr-3"></i>
+                    <span class="text-xs font-bold text-white">Instagram</span>
+                </a>
+                <a href="https://www.youtube.com/@ICreateRobot" target="_blank" class="btn-action flex items-center p-3.5 rounded-2xl group">
+                    <i class="fab fa-youtube text-lg text-red-500 mr-3"></i>
+                    <span class="text-xs font-bold text-white">YouTube</span>
+                </a>
+            </div>
+
+            <!-- 官网按钮 -->
+            <a href="http://www.icreaterobot.com" target="_blank" class="flex items-center justify-center py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl font-bold text-white text-[11px] tracking-widest uppercase">
+                <i class="fas fa-globe mr-2"></i> Visit Official Website
+            </a>
+        </div>
+    </div>
+
+    <!-- 留资弹窗 -->
+    <div id="downloadModal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden z-[100] flex items-center justify-center p-6">
+        <div class="max-w-sm w-full glass-panel rounded-3xl p-8 text-center">
+            <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-white">Get Brochure</h3>
+                <button onclick="closeModal()" class="text-slate-500 hover:text-white"><i class="fas fa-times"></i></button>
+            </div>
+            <p class="text-slate-400 text-xs mb-6">Leave your info to download the AI curriculum guide.</p>
+            <form id="leadForm" onsubmit="handleLeadSubmit(event)" class="space-y-4 text-left">
+                <input type="text" id="leadName" name="name" required placeholder="Full Name" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
+                <input type="text" id="leadContact" name="contact" required placeholder="Email or WhatsApp" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
+                <button type="submit" id="submitBtn" class="w-full bg-blue-600 py-3 rounded-xl font-bold text-sm text-white active:scale-95 shadow-lg">Submit & Download</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-8 py-3 rounded-full shadow-2xl hidden z-50 toast text-sm font-semibold">
+        <span id="toast-msg">Copied!</span>
+    </div>
+
+    <script>
+        // --- 核心提交与下载逻辑 ---
+        async function handleLeadSubmit(event) {
+            event.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const name = document.getElementById('leadName').value;
+            const contact = document.getElementById('leadContact').value;
+            
+            btn.disabled = true;
+            btn.innerText = "Sending...";
+
+            // 此处应填入你的 Formspree 链接
+            const formspreeEndpoint = "https://formspree.io/f/xqeeaeav"; 
+
+            try {
+                if (formspreeEndpoint.startsWith("http")) {
+                    await fetch(formspreeEndpoint, {
+                        method: 'POST',
+                        body: JSON.stringify({ name, contact, _subject: "New Lead from Business Card" }),
+                        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+                    });
+                }
+            } catch (err) { console.warn("Submission error."); }
+
+            showToast("Success! Downloading...");
+            
+            // 触发下载
+            setTimeout(() => {
+                const link = document.createElement('a');
+                link.href = "./Brochure.pdf";
+                link.download = 'Austin_An_Brochure.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                closeModal();
+                btn.disabled = false;
+                btn.innerText = "Submit & Download";
+            }, 800);
+        }
+
+        function openModal() { document.getElementById('downloadModal').classList.remove('hidden'); }
+        function closeModal() { document.getElementById('downloadModal').classList.add('hidden'); }
+        function copyToClipboard(text, label) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            showToast(`${label} copied!`);
+        }
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const msg = document.getElementById('toast-msg');
+            msg.innerText = message;
+            toast.classList.remove('hidden');
+            setTimeout(() => { toast.classList.add('hidden'); }, 2500);
+        }
+    </script>
+</body>
+</html>
